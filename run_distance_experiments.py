@@ -98,7 +98,7 @@ def _run_experiment(args):
     kwargs["distance_params"] = distance_params
 
     cnl = clusterer.lower()
-    if cnl.find("kmeans") or cnl.find("k-means"):
+    if "kmeans" in cnl or "k-means" in cnl:
         kwargs["averaging_method"] = "mean"
         kwargs["average_params"] = {}
 
