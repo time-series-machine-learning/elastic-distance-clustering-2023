@@ -13,15 +13,14 @@ from aeon.base._base import _clone_estimator
 from aeon.transformations.collection import Normalizer
 
 from tsml_eval.experiments import load_and_run_clustering_experiment
-from tsml_eval.publications.y2023.distance_based_clustering.set_distance_clusterer import (  # noqa: E501
-    _set_distance_clusterer,
-)
-from tsml_eval.publications.y2023.distance_based_clustering.tests import (
-    _DISTANCE_TEST_RESULTS_PATH,
-)
 from tsml_eval.testing.testing_utils import _TEST_DATA_PATH
 from tsml_eval.utils.arguments import parse_args
 from tsml_eval.utils.experiments import _results_present
+
+from set_distance_clusterer import _set_distance_clusterer
+
+_REPO_PATH = os.path.dirname(os.path.abspath(__file__))
+_DISTANCE_TEST_RESULTS_PATH = f"{_REPO_PATH}/test_output/"
 
 classifiers = [
     "KMeans-dtw",

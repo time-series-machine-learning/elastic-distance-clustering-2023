@@ -1,0 +1,4 @@
+# Latest versions. matplotlib is used by the alignment and paths notebook.
+# For the versions used in the paper see static_publication_reqs.txt
+tsml-eval
+matplotlib

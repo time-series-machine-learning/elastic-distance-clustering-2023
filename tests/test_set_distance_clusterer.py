@@ -1,12 +1,9 @@
 """Tests for publication experiments estimator selection."""
 
 import pytest
-
-from tsml_eval.publications.y2023.distance_based_clustering import (
-    _set_distance_clusterer,
-    distance_based_clusterers,
-)
 from tsml_eval.testing.testing_utils import _check_set_method, _check_set_method_results
+
+from set_distance_clusterer import _set_distance_clusterer, distance_based_clusterers
 
 
 def test_set_distance_clusterer():
@@ -33,3 +30,4 @@ def test_set_distance_clusterer_invalid():
     """Test set_distance_clusterer method with invalid estimator."""
     with pytest.raises(ValueError, match="UNKNOWN CLUSTERER"):
         _set_distance_clusterer("invalid")
+
